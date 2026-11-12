@@ -241,11 +241,40 @@
       background: linear-gradient(135deg, rgba(255, 255, 255, 0.96) 0%, rgba(240, 247, 255, 0.94) 100%);
       border: 1px solid rgba(191, 219, 254, 0.85);
       border-top: 3px solid var(--primary-blue);
-      padding: 2.5rem 2.35rem;
+      padding: 2.25rem 2.25rem;
       position: relative;
       overflow: hidden;
       box-shadow: var(--shadow-soft);
       backdrop-filter: blur(16px);
+      display: grid;
+      grid-template-columns: 1fr 205px;
+      align-items: center;
+      gap: 1.75rem;
+    }
+
+    .hero-content {
+      min-width: 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-portrait {
+      width: 205px;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 1px solid rgba(191, 219, 254, 0.95);
+      box-shadow: 0 10px 25px -8px rgba(15, 23, 42, 0.18);
+      background: #FFFFFF;
+      position: relative;
+      z-index: 1;
+      flex-shrink: 0;
+    }
+
+    .hero-portrait img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
     }
 
     .hero-glow {
@@ -846,7 +875,15 @@
 
     @media (max-width: 660px) {
       .hero {
-        padding: 2rem 1.35rem;
+        padding: 1.75rem 1.35rem;
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+      }
+
+      .hero-portrait {
+        width: 160px;
+        margin: 0 auto;
+        order: -1;
       }
 
       .section-card {
@@ -896,20 +933,26 @@
     <section class="hero">
       <div class="hero-glow"></div>
 
-      <h1 class="hero-title">
-        한광희 교수님 정년퇴임 기념<br />
-        <span class="highlight">‘감사의 밤’ 준비 자료</span>
-      </h1>
+      <div class="hero-content">
+        <h1 class="hero-title">
+          한광희 교수님 정년퇴임 기념<br />
+          <span class="highlight">‘감사의 밤’ 준비 자료</span>
+        </h1>
 
-      <p class="hero-desc">
-        교수님의 가르침과 함께한 소중한 시간을 돌아보고 감사와 존경의 마음을 전할 수 있도록 동문 여러분의 사진과 영상 축사를 보내주세요.
-      </p>
+        <p class="hero-desc">
+          교수님의 가르침과 함께한 소중한 시간을 돌아보고 감사와 존경의 마음을 전할 수 있도록 동문 여러분의 사진과 영상 축사를 보내주세요.
+        </p>
 
-      <div class="hero-notice">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-        </svg>
-        <span>보내주신 자료를 편집하여 행사 당일 함께 공유할 예정입니다. (취합된 원본은 준비위원에게만 공유하겠습니다)</span>
+        <div class="hero-notice">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+          </svg>
+          <span>보내주신 자료를 편집하여 행사 당일 함께 공유할 예정입니다. (취합된 원본은 준비위원에게만 공유하겠습니다)</span>
+        </div>
+      </div>
+
+      <div class="hero-portrait">
+        <img src="prof_han.jpg" alt="한광희 교수님" />
       </div>
     </section>
 
