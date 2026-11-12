@@ -190,7 +190,7 @@ function getOrCreateArchiveSheet() {
     const headers = [
       "제출일시",
       "성함",
-      "졸업년도",
+      "졸업(예정)년도",
       "근황 및 교수님께 드리는 인사",
       "사진별 상세 설명 (연도/장소/등장인물)",
       "사진 수",

@@ -826,11 +826,11 @@
       <section class="section-card">
         <div class="section-header">
           <span class="step-badge">STEP 1</span>
-          <h2 class="section-title">성함과 졸업년도, 근황을 적어주세요</h2>
+          <h2 class="section-title">성함과 졸업(예정)년도, 근황을 적어주세요</h2>
           <span class="section-tag">필수 항목</span>
         </div>
         <p class="section-desc">
-          자료 정리와 인사를 위해 성함과 졸업년도, 그리고 반가운 근황이나 교수님께 전하고 싶은 말씀을 적어주세요.
+          자료 정리와 인사를 위해 성함과 졸업(예정)년도, 그리고 반가운 근황이나 교수님께 전하고 싶은 말씀을 적어주세요.
         </p>
 
         <div class="field-grid">
@@ -839,7 +839,7 @@
             <input type="text" id="alumniName" name="alumniName" placeholder="예: 홍길동" required />
           </div>
           <div class="field-group" style="margin-bottom:0;">
-            <label class="field-label" for="gradYear">졸업년도 <span class="req">*</span></label>
+            <label class="field-label" for="gradYear">졸업(예정)년도 <span class="req">*</span></label>
             <input type="text" id="gradYear" name="gradYear" placeholder="예: 2016년" required />
           </div>
         </div>
@@ -1232,7 +1232,7 @@
       const alumniUpdate = document.getElementById('alumniUpdate').value.trim();
 
       if (!alumniName || !gradYear || !alumniUpdate) {
-        alert('성함, 졸업년도, 그리고 근황/메시지를 모두 입력해 주세요.');
+        alert('성함, 졸업(예정)년도, 그리고 근황/메시지를 모두 입력해 주세요.');
         return;
       }
 
