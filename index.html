@@ -8,6 +8,8 @@
   <meta property="og:title" content="한광희 교수님 정년퇴임 기념 ‘감사의 밤’ — Assets" />
   <meta property="og:description" content="교수님의 가르침과 함께한 시간을 돌아보고 감사와 존경의 마음을 전하는 자리입니다. 추억이 담긴 사진과 영상 축사를 보내주세요." />
   <meta property="og:type" content="website" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="shortcut icon" href="favicon.ico" />
 
   <!-- Fonts: Plus Jakarta Sans (Clean Modern Display) & Pretendard (KR UI Sans) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -105,10 +107,10 @@
     .lab-identity {
       display: inline-flex;
       align-items: center;
-      gap: 0.55rem;
-      background: rgba(255, 255, 255, 0.9);
+      gap: 0.6rem;
+      background: rgba(255, 255, 255, 0.92);
       border: 1px solid var(--border-soft);
-      padding: 0.45rem 0.85rem;
+      padding: 0.45rem 0.9rem;
       border-radius: var(--radius-sm);
       font-size: 0.82rem;
       font-weight: 600;
@@ -117,11 +119,11 @@
       backdrop-filter: blur(10px);
     }
 
-    .lab-dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 2px;
-      background: linear-gradient(135deg, var(--primary-blue), var(--accent-sky));
+    .lab-logo-symbol {
+      width: 20px;
+      height: 20px;
+      object-fit: contain;
+      display: block;
     }
 
     /* Hero Card */
@@ -786,7 +788,7 @@
     <!-- Minimal Header -->
     <header class="site-header">
       <div class="lab-identity">
-        <span class="lab-dot"></span>
+        <img src="favicon.png" alt="YONSEI COGENG LAB" class="lab-logo-symbol" />
         <span>연세대학교 심리학과 및 인지과학협동과정 인지공학연구실</span>
       </div>
     </header>
