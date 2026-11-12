@@ -8,10 +8,9 @@
  * - 대용량 동영상 축사(20MB 초과)도 Google Drive Resumable Upload API를 통해 안전하게 분할 저장됩니다.
  */
 
-// [선택 설정] 특정 구글 드라이브 폴더 안에 모으고 싶다면 폴더 ID를 입력하세요.
-// 비워두면("") 내 드라이브 최상단에 "한광희교수님_감사의밤_아카이브" 폴더가 자동 생성됩니다.
-const ROOT_FOLDER_ID = "";
-const DEFAULT_ROOT_FOLDER_NAME = "한광희교수님_감사의밤_아카이브";
+// 지정된 구글 드라이브 폴더("한광희 교수님 정년퇴임 기념 감사의 밤") ID
+const ROOT_FOLDER_ID = "1zxMwlOEjcf0gdGNayOPO4anBlJ-tUkOj";
+const DEFAULT_ROOT_FOLDER_NAME = "한광희 교수님 정년퇴임 기념 감사의 밤";
 
 function doPost(e) {
   try {
