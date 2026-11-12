@@ -43,13 +43,39 @@ function handleInitSubmission(data) {
   const safeGrad = sanitizeName(data.gradYear || "학번미상");
   const safeName = sanitizeName(data.alumniName || "이름미상");
 
-  // 동문별 하위 폴더 생성 (예: [2016석사_홍길동_1112_2245])
+  // 동문별 하위 폴더 생성 (예: [2016년_홍길동_1112_2245])
   const subFolderName = `[${safeGrad}_${safeName}_${dateShort}]`;
   const subFolder = rootFolder.createFolder(subFolderName);
   const subFolderUrl = subFolder.getUrl();
 
+  // 동문 폴더 내부에 작성글 및 사진 설명 텍스트 파일(.txt) 자동 생성
+  const txtFileName = `[${safeGrad}_${safeName}]_작성글_및_사진설명.txt`;
+  const txtContent = [
+    "================================================================",
+    " 한광희 교수님 정년퇴임 기념 ‘감사의 밤’ 제출 자료 요약",
+    "================================================================",
+    "",
+    "■ 제출일시: " + timestamp,
+    "■ 성함: " + (data.alumniName || ""),
+    "■ 졸업(예정)년도: " + (data.gradYear || ""),
+    "■ 첨부 파일 수: 사진 " + (data.photoCount || 0) + "장 / 동영상 " + (data.videoCount || 0) + "개",
+    "",
+    "----------------------------------------------------------------",
+    "[근황 및 교수님께 드리는 메시지]",
+    "----------------------------------------------------------------",
+    (data.alumniUpdate || "(내용 없음)"),
+    "",
+    "----------------------------------------------------------------",
+    "[업로드 사진별 상세 설명]",
+    "----------------------------------------------------------------",
+    (data.photoSummary || "(첨부된 사진 설명 없음)"),
+    ""
+  ].join("\r\n");
+
+  const txtFile = subFolder.createFile(txtFileName, txtContent, MimeType.PLAIN_TEXT);
+
   // 시트 행 기록:
-  // [제출일시, 성함, 졸업년도/학번, 근황 및 인사말, 사진별 상세정보 요약, 첨부 사진수, 첨부 영상수, 드라이브 폴더 링크, 업로드된 파일 목록]
+  // [제출일시, 성함, 졸업(예정)년도, 근황 및 인사말, 사진별 상세정보 요약, 첨부 사진수, 첨부 영상수, 드라이브 폴더 링크, 업로드된 파일 목록]
   sheet.appendRow([
     timestamp,
     data.alumniName || "",
@@ -59,7 +85,7 @@ function handleInitSubmission(data) {
     data.photoCount || 0,
     data.videoCount || 0,
     subFolderUrl,
-    ""
+    `${txtFileName} (${txtFile.getUrl()})`
   ]);
 
   const rowNumber = sheet.getLastRow();
