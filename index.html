@@ -126,6 +126,113 @@
       display: block;
     }
 
+    .invite-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      background: var(--primary-blue);
+      color: #FFFFFF;
+      border: 1px solid var(--primary-blue);
+      padding: 0.48rem 0.95rem;
+      border-radius: var(--radius-sm);
+      font-family: var(--font-sans);
+      font-size: 0.82rem;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(29, 78, 216, 0.2);
+      transition: all 0.18s ease;
+    }
+
+    .invite-btn:hover {
+      background: #1E40AF;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 16px rgba(29, 78, 216, 0.28);
+    }
+
+    /* Invitation Popup Modal */
+    .invite-modal-backdrop {
+      position: fixed;
+      inset: 0;
+      z-index: 999;
+      background: rgba(15, 23, 42, 0.65);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 1.25rem;
+    }
+
+    .invite-modal-backdrop.active {
+      display: flex;
+      animation: cardPop 0.2s ease-out;
+    }
+
+    .invite-modal {
+      background: #F3EFE6;
+      border-radius: var(--radius-lg);
+      max-width: 540px;
+      width: 100%;
+      max-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.45);
+      border: 1px solid rgba(255, 255, 255, 0.4);
+    }
+
+    .invite-modal-header {
+      background: #FFFFFF;
+      padding: 0.85rem 1.15rem;
+      border-bottom: 1px solid #E2E8F0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    .invite-modal-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text-strong);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .invite-close-btn {
+      background: #F1F5F9;
+      color: var(--text-body);
+      border: 1px solid #CBD5E1;
+      border-radius: var(--radius-sm);
+      padding: 0.3rem 0.7rem;
+      font-size: 0.8rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+
+    .invite-close-btn:hover {
+      background: var(--text-strong);
+      color: #FFFFFF;
+      border-color: var(--text-strong);
+    }
+
+    .invite-modal-body {
+      overflow-y: auto;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      background: #E5E0D5;
+    }
+
+    .invite-modal-body img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
     /* Hero Card */
     .hero {
       margin-top: 1.25rem;
@@ -776,6 +883,13 @@
         <img src="favicon.png" alt="YONSEI COGENG LAB" class="lab-logo-symbol" />
         <span>연세대학교 심리학과 및 인지과학협동과정 인지공학연구실</span>
       </div>
+      <button type="button" id="openInviteBtn" class="invite-btn">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+          <rect x="3" y="4" width="18" height="16" rx="2"/>
+          <polyline points="3,6 12,13 21,6"/>
+        </svg>
+        <span>초대장 보기</span>
+      </button>
     </header>
 
     <!-- Hero Section -->
@@ -940,7 +1054,48 @@
     </footer>
   </main>
 
+  <!-- Invitation Popup Modal -->
+  <div id="inviteModalBackdrop" class="invite-modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="inviteModalTitle">
+    <div class="invite-modal">
+      <div class="invite-modal-header">
+        <div id="inviteModalTitle" class="invite-modal-title">
+          <img src="favicon.png" alt="" style="width:18px;height:18px;" />
+          <span>한광희 선생님 정년퇴임 기념 감사의 밤 초대장</span>
+        </div>
+        <button type="button" id="closeInviteBtn" class="invite-close-btn">닫기 ✕</button>
+      </div>
+      <div class="invite-modal-body">
+        <img src="invitation_1.jpg" alt="한광희 선생님 정년퇴임 기념 감사의 밤 초대장 안내" />
+        <img src="invitation_2.jpg" alt="오시는 길 및 주차 안내" />
+      </div>
+    </div>
+  </div>
+
   <script>
+    (function initInviteModal() {
+      const openBtn = document.getElementById('openInviteBtn');
+      const closeBtn = document.getElementById('closeInviteBtn');
+      const backdrop = document.getElementById('inviteModalBackdrop');
+      if (!openBtn || !backdrop) return;
+
+      openBtn.addEventListener('click', () => {
+        backdrop.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      });
+
+      function closeModal() {
+        backdrop.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+
+      if (closeBtn) closeBtn.addEventListener('click', closeModal);
+      backdrop.addEventListener('click', (e) => {
+        if (e.target === backdrop) closeModal();
+      });
+      window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && backdrop.classList.contains('active')) closeModal();
+      });
+    })();
     /**
      * ============================================================================
      * [설정] Google Apps Script 웹 앱 배포 URL을 아래 따옴표 안에 붙여넣으세요.
