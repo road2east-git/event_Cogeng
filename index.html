@@ -1,0 +1,1414 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>한광희 교수님 정년퇴임 기념 ‘감사의 밤’ — 추억 아카이브</title>
+  <meta name="description" content="연세대학교 심리학과 및 인지과학협동과정 인지공학연구실 한광희 교수님 정년퇴임 기념 감사의 밤 자료 수집 웹페이지" />
+  <meta property="og:title" content="한광희 교수님 정년퇴임 기념 ‘감사의 밤’" />
+  <meta property="og:description" content="교수님의 가르침과 함께한 시간을 돌아보고 감사와 존경의 마음을 전하는 자리입니다. 추억이 담긴 사진과 영상 축사를 보내주세요." />
+  <meta property="og:type" content="website" />
+
+  <!-- Fonts: Plus Jakarta Sans (Clean Modern Display) & Pretendard (KR UI Sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+
+  <style>
+    :root {
+      --bg-base: #F5F8FF;
+      --bg-card: rgba(255, 255, 255, 0.88);
+      --bg-card-solid: #FFFFFF;
+      --bg-soft: #EEF3FC;
+
+      --primary-blue: #1D4ED8;
+      --accent-sky: #0EA5E9;
+      --accent-indigo: #6366F1;
+      --accent-teal: #0D9488;
+      --danger-red: #E11D48;
+
+      --text-strong: #0F172A;
+      --text-body: #334155;
+      --text-muted: #64748B;
+      --text-light: #94A3B8;
+
+      --border-soft: rgba(203, 213, 225, 0.7);
+      --border-focus: #2563EB;
+
+      --font-sans: 'Pretendard', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-en: 'Plus Jakarta Sans', 'Pretendard', sans-serif;
+
+      --radius-sm: 4px;
+      --radius-md: 6px;
+      --radius-lg: 8px;
+
+      --shadow-soft: 0 10px 30px -10px rgba(30, 64, 175, 0.08), 0 4px 12px -2px rgba(15, 23, 42, 0.04);
+      --shadow-hover: 0 18px 40px -12px rgba(30, 64, 175, 0.14);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background-color: var(--bg-base);
+      color: var(--text-strong);
+      font-family: var(--font-sans);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      min-height: 100vh;
+      background-color: var(--bg-base);
+      background-image:
+        radial-gradient(circle at 12% 10%, rgba(14, 165, 233, 0.12) 0%, transparent 40%),
+        radial-gradient(circle at 88% 12%, rgba(99, 102, 241, 0.11) 0%, transparent 42%),
+        radial-gradient(circle at 50% 90%, rgba(56, 189, 248, 0.1) 0%, transparent 50%);
+      line-height: 1.65;
+      padding-bottom: 5rem;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* Interactive Light Cognitive Network Canvas */
+    #cognitiveCanvas {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .container {
+      max-width: 840px;
+      margin: 0 auto;
+      padding: 0 1.25rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Top Minimal Header */
+    .site-header {
+      padding: 1.5rem 0 0.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .lab-identity {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid var(--border-soft);
+      padding: 0.45rem 0.85rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--primary-blue);
+      box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+      backdrop-filter: blur(10px);
+    }
+
+    .lab-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 2px;
+      background: linear-gradient(135deg, var(--primary-blue), var(--accent-sky));
+    }
+
+    /* Hero Card */
+    .hero {
+      margin-top: 1.25rem;
+      margin-bottom: 1.75rem;
+      border-radius: var(--radius-lg);
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.96) 0%, rgba(240, 247, 255, 0.94) 100%);
+      border: 1px solid rgba(191, 219, 254, 0.85);
+      border-top: 3px solid var(--primary-blue);
+      padding: 2.5rem 2.35rem;
+      position: relative;
+      overflow: hidden;
+      box-shadow: var(--shadow-soft);
+      backdrop-filter: blur(16px);
+    }
+
+    .hero-glow {
+      position: absolute;
+      right: -60px;
+      top: -60px;
+      width: 240px;
+      height: 240px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(14, 165, 233, 0.14) 0%, rgba(99, 102, 241, 0.05) 60%, transparent 75%);
+      pointer-events: none;
+    }
+
+    .hero-title {
+      font-size: clamp(1.7rem, 4vw, 2.35rem);
+      font-weight: 800;
+      line-height: 1.32;
+      letter-spacing: -0.025em;
+      color: var(--text-strong);
+      margin-bottom: 1rem;
+      word-break: keep-all;
+    }
+
+    .hero-title .highlight {
+      background: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-sky) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-desc {
+      font-size: 0.98rem;
+      color: var(--text-body);
+      line-height: 1.75;
+      word-break: keep-all;
+      margin-bottom: 1.4rem;
+    }
+
+    .hero-desc strong {
+      color: var(--text-strong);
+      font-weight: 700;
+    }
+
+    .hero-notice {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: #0F766E;
+      background: #F0FDFA;
+      border: 1px solid #99F6E4;
+      padding: 0.6rem 1rem;
+      border-radius: var(--radius-sm);
+    }
+
+    .hero-notice svg {
+      flex-shrink: 0;
+      color: var(--accent-teal);
+    }
+
+    /* Setup Preview Banner */
+    .setup-banner {
+      background: #FFFBEB;
+      border: 1px solid #FDE68A;
+      color: #92400E;
+      padding: 0.85rem 1.15rem;
+      border-radius: var(--radius-md);
+      margin-bottom: 1.5rem;
+      font-size: 0.84rem;
+      display: none;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      box-shadow: 0 4px 12px rgba(245, 158, 11, 0.06);
+    }
+
+    .setup-banner.visible {
+      display: flex;
+    }
+
+    .setup-banner code {
+      background: rgba(217, 119, 6, 0.12);
+      padding: 0.15rem 0.4rem;
+      border-radius: 5px;
+      font-weight: 600;
+    }
+
+    /* Section Cards */
+    .section-card {
+      background: var(--bg-card);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--border-soft);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      margin-bottom: 1.5rem;
+      box-shadow: var(--shadow-soft);
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .section-card:focus-within {
+      border-color: #93C5FD;
+      box-shadow: var(--shadow-hover);
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      margin-bottom: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .step-badge {
+      font-family: var(--font-en);
+      font-size: 0.74rem;
+      font-weight: 800;
+      padding: 0.26rem 0.65rem;
+      border-radius: var(--radius-sm);
+      background: linear-gradient(135deg, var(--primary-blue), var(--accent-sky));
+      color: #FFFFFF;
+    }
+
+    .section-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--text-strong);
+      letter-spacing: -0.015em;
+    }
+
+    .section-tag {
+      margin-left: auto;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--primary-blue);
+      background: #EFF6FF;
+      border: 1px solid #DBEAFE;
+      padding: 0.2rem 0.6rem;
+      border-radius: var(--radius-sm);
+    }
+
+    .section-desc {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      margin-bottom: 1.4rem;
+      word-break: keep-all;
+    }
+
+    /* Form Fields */
+    .field-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-bottom: 1.1rem;
+    }
+
+    .field-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.42rem;
+      margin-bottom: 1.1rem;
+    }
+
+    .field-group:last-child {
+      margin-bottom: 0;
+    }
+
+    label.field-label {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--text-strong);
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+
+    .req {
+      color: var(--danger-red);
+    }
+
+    input[type="text"],
+    textarea {
+      width: 100%;
+      padding: 0.82rem 1rem;
+      font-family: var(--font-sans);
+      font-size: 0.95rem;
+      color: var(--text-strong);
+      background: var(--bg-card-solid);
+      border: 1px solid #CBD5E1;
+      border-radius: var(--radius-sm);
+      transition: all 0.18s ease;
+    }
+
+    input[type="text"]:focus,
+    textarea:focus {
+      outline: none;
+      border-color: var(--border-focus);
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+    }
+
+    input[type="text"]::placeholder,
+    textarea::placeholder {
+      color: var(--text-light);
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 110px;
+      line-height: 1.65;
+    }
+
+    /* Bright Fresh Dropzone */
+    .dropzone {
+      border: 2px dashed #93C5FD;
+      background: linear-gradient(180deg, #F8FAFC 0%, #EFF6FF 100%);
+      border-radius: var(--radius-md);
+      padding: 2.2rem 1.5rem;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      position: relative;
+    }
+
+    .dropzone:hover,
+    .dropzone.dragover {
+      border-color: var(--primary-blue);
+      background: #EFF6FF;
+      transform: translateY(-1px);
+    }
+
+    .dropzone input[type="file"] {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      cursor: pointer;
+      width: 100%;
+      height: 100%;
+    }
+
+    .dropzone-icon {
+      width: 48px;
+      height: 48px;
+      margin: 0 auto 0.75rem;
+      border-radius: var(--radius-md);
+      background: #FFFFFF;
+      border: 1px solid #DBEAFE;
+      color: var(--primary-blue);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.1);
+    }
+
+    .dropzone-title {
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--text-strong);
+      margin-bottom: 0.25rem;
+    }
+
+    .dropzone-sub {
+      font-size: 0.83rem;
+      color: var(--text-muted);
+    }
+
+    /* HCI Friendly Callout */
+    .hci-tip {
+      margin-top: 1rem;
+      background: #F0F9FF;
+      border: 1px solid #BAE6FD;
+      border-radius: var(--radius-sm);
+      padding: 0.8rem 1rem;
+      font-size: 0.84rem;
+      color: var(--text-body);
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+    }
+
+    .hci-tip-badge {
+      font-family: var(--font-en);
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: #0369A1;
+      background: #E0F2FE;
+      padding: 0.15rem 0.5rem;
+      border-radius: var(--radius-sm);
+      flex-shrink: 0;
+      margin-top: 0.1rem;
+    }
+
+    /* Photo Memory Cards */
+    .photo-cards-list {
+      margin-top: 1.35rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .photo-index-card {
+      background: var(--bg-card-solid);
+      border: 1px solid #BFDBFE;
+      border-radius: var(--radius-md);
+      padding: 1.25rem;
+      display: grid;
+      grid-template-columns: 175px 1fr;
+      gap: 1.25rem;
+      position: relative;
+      box-shadow: 0 4px 14px rgba(15, 23, 42, 0.04);
+      animation: cardPop 0.25s ease-out;
+    }
+
+    @keyframes cardPop {
+      from {
+        opacity: 0;
+        transform: translateY(8px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .photo-preview-col {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .photo-badge {
+      display: inline-block;
+      font-family: var(--font-en);
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--primary-blue);
+      background: #EFF6FF;
+      padding: 0.18rem 0.55rem;
+      border-radius: var(--radius-sm);
+      width: fit-content;
+    }
+
+    .photo-thumb-wrap {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      background: var(--bg-soft);
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      border: 1px solid var(--border-soft);
+    }
+
+    .photo-thumb-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .photo-file-meta {
+      font-size: 0.73rem;
+      color: var(--text-muted);
+      word-break: break-all;
+      line-height: 1.35;
+    }
+
+    .photo-meta-col {
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+    }
+
+    .photo-meta-row {
+      display: grid;
+      grid-template-columns: 125px 1fr;
+      gap: 0.7rem;
+    }
+
+    .photo-meta-col label {
+      font-size: 0.76rem;
+      font-weight: 600;
+      color: var(--text-body);
+      margin-bottom: 0.22rem;
+      display: block;
+    }
+
+    .photo-meta-col input {
+      padding: 0.58rem 0.8rem;
+      font-size: 0.88rem;
+    }
+
+    .remove-file-btn {
+      position: absolute;
+      top: 0.85rem;
+      right: 0.85rem;
+      background: #FFF1F2;
+      color: var(--danger-red);
+      border: 1px solid #FECDD3;
+      border-radius: var(--radius-sm);
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.25rem 0.6rem;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+
+    .remove-file-btn:hover {
+      background: var(--danger-red);
+      color: #FFFFFF;
+    }
+
+    /* Video Item List */
+    .video-list {
+      margin-top: 1.1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .video-item-card {
+      background: var(--bg-card-solid);
+      border: 1px solid #C7D2FE;
+      border-radius: var(--radius-sm);
+      padding: 0.85rem 1.1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .video-item-info {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      min-width: 0;
+    }
+
+    .video-badge {
+      background: #EEF2FF;
+      color: #4F46E5;
+      font-family: var(--font-en);
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 0.22rem 0.55rem;
+      border-radius: var(--radius-sm);
+      flex-shrink: 0;
+    }
+
+    .video-name {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-strong);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .video-size {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      flex-shrink: 0;
+    }
+
+    /* Submit Button */
+    .submit-section {
+      margin-top: 2rem;
+    }
+
+    .submit-btn {
+      width: 100%;
+      padding: 1.15rem 2rem;
+      background: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-sky) 100%);
+      color: #FFFFFF;
+      border: none;
+      border-radius: var(--radius-md);
+      font-family: var(--font-sans);
+      font-size: 1.08rem;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 12px 28px -8px rgba(29, 78, 216, 0.45);
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.65rem;
+    }
+
+    .submit-btn:hover:not(:disabled) {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 32px -8px rgba(14, 165, 233, 0.55);
+      filter: brightness(1.04);
+    }
+
+    .submit-btn:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+
+    /* Upload Progress Box */
+    .progress-box {
+      display: none;
+      margin-top: 1.25rem;
+      background: var(--bg-card-solid);
+      border: 1px solid #93C5FD;
+      border-radius: var(--radius-md);
+      padding: 1.35rem 1.5rem;
+      text-align: left;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .progress-box.active {
+      display: block;
+    }
+
+    .progress-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.6rem;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--primary-blue);
+    }
+
+    .progress-bar-track {
+      width: 100%;
+      height: 8px;
+      background: #E2E8F0;
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+    }
+
+    .progress-bar-fill {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, var(--primary-blue), var(--accent-sky));
+      transition: width 0.25s ease;
+    }
+
+    .progress-detail {
+      margin-top: 0.5rem;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    /* Completion Screen */
+    .completion-card {
+      display: none;
+      background: var(--bg-card-solid);
+      border: 1px solid #99F6E4;
+      border-radius: var(--radius-lg);
+      padding: 3rem 2rem;
+      text-align: center;
+      margin-top: 2rem;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .completion-card.active {
+      display: block;
+      animation: cardPop 0.35s ease-out;
+    }
+
+    .completion-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: var(--radius-md);
+      background: #F0FDFA;
+      color: var(--accent-teal);
+      border: 1px solid #99F6E4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.25rem;
+    }
+
+    .completion-title {
+      font-size: 1.55rem;
+      font-weight: 800;
+      color: var(--text-strong);
+      margin-bottom: 0.7rem;
+    }
+
+    .completion-desc {
+      font-size: 0.95rem;
+      color: var(--text-body);
+      max-width: 460px;
+      margin: 0 auto 1.75rem;
+      word-break: keep-all;
+    }
+
+    .reset-btn {
+      padding: 0.75rem 1.5rem;
+      background: #EFF6FF;
+      color: var(--primary-blue);
+      border: 1px solid #BFDBFE;
+      border-radius: var(--radius-sm);
+      font-size: 0.9rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+
+    .reset-btn:hover {
+      background: var(--primary-blue);
+      color: #FFFFFF;
+    }
+
+    footer {
+      margin-top: 3.5rem;
+      text-align: center;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border-soft);
+      padding-top: 1.75rem;
+    }
+
+    @media (max-width: 660px) {
+      .hero {
+        padding: 2rem 1.35rem;
+      }
+
+      .section-card {
+        padding: 1.5rem 1.25rem;
+      }
+
+      .field-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .photo-index-card {
+        grid-template-columns: 1fr;
+      }
+
+      .photo-thumb-wrap {
+        max-height: 210px;
+      }
+
+      .photo-meta-row {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Bright & Airy Cognitive Science / HCI Concept Network Canvas -->
+  <canvas id="cognitiveCanvas"></canvas>
+
+  <main class="container">
+    <!-- Minimal Header -->
+    <header class="site-header">
+      <div class="lab-identity">
+        <span class="lab-dot"></span>
+        <span>연세대학교 심리학과 및 인지과학협동과정 인지공학연구실</span>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-glow"></div>
+
+      <h1 class="hero-title">
+        한광희 교수님 정년퇴임 기념<br />
+        <span class="highlight">‘감사의 밤’ 추억 아카이브</span>
+      </h1>
+
+      <p class="hero-desc">
+        교수님의 가르침과 함께한 소중한 시간을 돌아보고 감사와 존경의 마음을 전할 수 있도록 동문 여러분의 사진과 영상 축사를 보내주세요.
+      </p>
+
+      <div class="hero-notice">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+        </svg>
+        <span>보내주신 자료를 편집하여 행사 당일 함께 공유할 예정입니다. (취합된 원본은 준비위원에게만 공유하겠습니다)</span>
+      </div>
+    </section>
+
+    <!-- Setup Preview Notice (Hidden automatically once SCRIPT_URL is configured) -->
+    <div id="setupBanner" class="setup-banner">
+      <div>
+        <strong>💡 미리보기 모드:</strong> <code>SCRIPT_URL</code> 연결 전입니다. 지금 바로 사진을 선택해서 <strong>사진별 설명 입력 카드</strong>가 생성되는 모습을 확인해 보세요!
+      </div>
+    </div>
+
+    <!-- Main Form -->
+    <form id="archiveForm" novalidate>
+
+      <!-- Step 1: 동문 정보 및 근황 -->
+      <section class="section-card">
+        <div class="section-header">
+          <span class="step-badge">STEP 1</span>
+          <h2 class="section-title">성함과 졸업년도, 근황을 적어주세요</h2>
+          <span class="section-tag">필수 항목</span>
+        </div>
+        <p class="section-desc">
+          자료 정리와 인사를 위해 성함과 졸업년도, 그리고 반가운 근황이나 교수님께 전하고 싶은 말씀을 적어주세요.
+        </p>
+
+        <div class="field-grid">
+          <div class="field-group" style="margin-bottom:0;">
+            <label class="field-label" for="alumniName">성함 <span class="req">*</span></label>
+            <input type="text" id="alumniName" name="alumniName" placeholder="예: 홍길동" required />
+          </div>
+          <div class="field-group" style="margin-bottom:0;">
+            <label class="field-label" for="gradYear">졸업년도 <span class="req">*</span></label>
+            <input type="text" id="gradYear" name="gradYear" placeholder="예: 2016년" required />
+          </div>
+        </div>
+
+        <div class="field-group">
+          <label class="field-label" for="alumniUpdate">근황 및 교수님께 드리는 메시지 <span class="req">*</span></label>
+          <textarea id="alumniUpdate" name="alumniUpdate" placeholder="현재 어떻게 지내고 계신지 반가운 근황과 함께, 한광희 교수님께 전하고 싶은 감사와 존경의 마음을 자유롭게 적어주세요." required></textarea>
+        </div>
+      </section>
+
+      <!-- Step 2: 추억 사진 업로드 -->
+      <section class="section-card">
+        <div class="section-header">
+          <span class="step-badge">STEP 2</span>
+          <h2 class="section-title">추억이 담긴 “사진”을 업로드해주세요</h2>
+          <span class="section-tag">여러 장 선택 가능</span>
+        </div>
+        <p class="section-desc">
+          한광희 교수님 혹은 인지공학연구실 동료와의 추억이 담긴 사진을 올려주세요.<br />
+          사진을 선택하면 <strong>각 사진 바로 옆에 촬영년도, 등장인물, 장소(예: 2016년 HCI 학회)를 적는 카드</strong>가 자동으로 나타납니다.
+        </p>
+
+        <div class="dropzone" id="photoDropzone">
+          <input type="file" id="photoInput" accept="image/*" multiple aria-label="추억 사진 파일 선택" />
+          <div class="dropzone-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+              <circle cx="8.5" cy="8.5" r="1.5"/>
+              <polyline points="21 15 16 10 5 21"/>
+            </svg>
+          </div>
+          <div class="dropzone-title">클릭하거나 추억 사진들을 이곳에 끌어다 놓으세요</div>
+          <div class="dropzone-sub">JPG, PNG, HEIC, WEBP 이미지 지원 (여러 장 동시 선택 가능)</div>
+        </div>
+
+        <div class="hci-tip">
+          <span class="hci-tip-badge">HCI UX</span>
+          <div>
+            파일명을 일일이 외워서 적으실 필요가 없습니다! 사진을 추가한 뒤 아래 카드에 기억나는 수준에서 정보를 적어주시면 <strong>파일명이 자동으로 보기 좋게 변환되어 저장</strong>됩니다.
+          </div>
+        </div>
+
+        <!-- Dynamic Photo Index Cards Container -->
+        <div id="photoCardsContainer" class="photo-cards-list"></div>
+      </section>
+
+      <!-- Step 3: 동영상 축사 업로드 -->
+      <section class="section-card">
+        <div class="section-header">
+          <span class="step-badge">STEP 3</span>
+          <h2 class="section-title">동영상 축사 업로드</h2>
+          <span class="section-tag">원거리 및 미참석 동문</span>
+        </div>
+        <p class="section-desc">
+          원거리 동문 및 참석이 어려운 분들은 동영상 축사를 촬영하여 업로드해주세요.
+        </p>
+
+        <div class="dropzone" id="videoDropzone">
+          <input type="file" id="videoInput" accept="video/*" multiple aria-label="동영상 축사 파일 선택" />
+          <div class="dropzone-icon" style="color: var(--accent-indigo);">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="23 7 16 12 23 17 23 7"/>
+              <rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>
+            </svg>
+          </div>
+          <div class="dropzone-title">동영상 축사 파일 선택 또는 끌어다 놓기</div>
+          <div class="dropzone-sub">MP4, MOV 등 동영상 파일 지원 (가로 방향 촬영 권장)</div>
+        </div>
+
+        <div id="videoListContainer" class="video-list"></div>
+      </section>
+
+      <!-- Submit & Progress -->
+      <div class="submit-section">
+        <button type="submit" id="submitBtn" class="submit-btn">
+          <span>감사의 밤 자료 제출하기</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </button>
+
+        <div id="progressBox" class="progress-box" role="status" aria-live="polite">
+          <div class="progress-header">
+            <span id="progressStatusText">자료를 안전하게 전송하고 있습니다...</span>
+            <span id="progressPercentText">0%</span>
+          </div>
+          <div class="progress-bar-track">
+            <div id="progressBarFill" class="progress-bar-fill"></div>
+          </div>
+          <div id="progressDetailText" class="progress-detail">전송 준비 중...</div>
+        </div>
+      </div>
+
+    </form>
+
+    <!-- Completion Screen -->
+    <section id="completionCard" class="completion-card">
+      <div class="completion-icon">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <polyline points="20 6 9 17 4 12"></polyline>
+        </svg>
+      </div>
+      <h2 class="completion-title">소중한 추억을 보내주셔서 감사합니다!</h2>
+      <p class="completion-desc">
+        보내주신 자료와 메시지가 연세대학교 인지공학연구실 한광희 교수님 정년퇴임 기념 ‘감사의 밤’ 준비위원회로 안전하게 전달되었습니다.
+      </p>
+      <button type="button" id="resetBtn" class="reset-btn">추가 자료 더 올리기</button>
+    </section>
+
+    <footer>
+      <p>연세대학교 심리학과 및 인지과학협동과정 인지공학연구실 (Yonsei Cognitive Engineering Lab)</p>
+      <p style="margin-top: 0.25rem;">한광희 교수님 정년퇴임 기념 ‘감사의 밤’ 준비위원회</p>
+    </footer>
+  </main>
+
+  <script>
+    /**
+     * ============================================================================
+     * [설정] Google Apps Script 웹 앱 배포 URL을 아래 따옴표 안에 붙여넣으세요.
+     * 예: const SCRIPT_URL = "https://script.google.com/macros/s/AKfycb.../exec";
+     * ============================================================================
+     */
+    const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzJUXJBHN1IHN0Xpkwq8jPqR7rMAuOcu60T8hJGYvC-AdcI6-3vqav4-q37NIfBQQ2wKw/exec";
+
+    /* --------------------------------------------------------------------------
+     * 1. Bright & Fresh Cognitive Science / HCI Concept Network Canvas
+     * -------------------------------------------------------------------------- */
+    (function initLightCognitiveCanvas() {
+      const canvas = document.getElementById('cognitiveCanvas');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      let width = (canvas.width = window.innerWidth);
+      let height = (canvas.height = window.innerHeight);
+
+      const keywords = [
+        'Human-Computer Interaction', 'Cognitive Engineering', 'Cognitive Psychology',
+        'Cognitive Science', 'Human Factors', 'User Experience',
+        'Perception', 'Attention', 'Memory', 'Mental Model', 'Affordance', 'Decision Making'
+      ];
+
+      const nodeCount = Math.min(20, Math.max(10, Math.floor(width / 80)));
+      const nodes = Array.from({ length: nodeCount }, (_, i) => ({
+        x: Math.random() * width,
+        y: Math.random() * height,
+        vx: (Math.random() - 0.5) * 0.3,
+        vy: (Math.random() - 0.5) * 0.3,
+        radius: i % 3 === 0 ? 3.2 : 2.2,
+        label: i < keywords.length ? keywords[i] : null
+      }));
+
+      let pointer = { x: -9999, y: -9999 };
+      window.addEventListener('mousemove', (e) => {
+        pointer.x = e.clientX;
+        pointer.y = e.clientY;
+      });
+      window.addEventListener('resize', () => {
+        width = canvas.width = window.innerWidth;
+        height = canvas.height = window.innerHeight;
+      });
+
+      function draw() {
+        ctx.clearRect(0, 0, width, height);
+
+        for (let i = 0; i < nodes.length; i++) {
+          const a = nodes[i];
+          a.x += a.vx;
+          a.y += a.vy;
+          if (a.x < 0 || a.x > width) a.vx *= -1;
+          if (a.y < 0 || a.y > height) a.vy *= -1;
+
+          for (let j = i + 1; j < nodes.length; j++) {
+            const b = nodes[j];
+            const dist = Math.hypot(a.x - b.x, a.y - b.y);
+            if (dist < 180) {
+              const alpha = (1 - dist / 180) * 0.14;
+              ctx.strokeStyle = `rgba(37, 99, 235, ${alpha})`;
+              ctx.lineWidth = 1;
+              ctx.beginPath();
+              ctx.moveTo(a.x, a.y);
+              ctx.lineTo(b.x, b.y);
+              ctx.stroke();
+            }
+          }
+
+          const pdist = Math.hypot(pointer.x - a.x, pointer.y - a.y);
+          if (pdist < 200) {
+            ctx.strokeStyle = `rgba(14, 165, 233, ${(1 - pdist / 200) * 0.25})`;
+            ctx.beginPath();
+            ctx.moveTo(a.x, a.y);
+            ctx.lineTo(pointer.x, pointer.y);
+            ctx.stroke();
+          }
+
+          ctx.fillStyle = a.label ? 'rgba(37, 99, 235, 0.35)' : 'rgba(148, 163, 184, 0.3)';
+          ctx.beginPath();
+          ctx.arc(a.x, a.y, a.radius, 0, Math.PI * 2);
+          ctx.fill();
+
+          if (a.label) {
+            ctx.font = '600 10.5px "Plus Jakarta Sans", sans-serif';
+            ctx.fillStyle = 'rgba(100, 116, 139, 0.35)';
+            ctx.fillText(a.label, a.x + 8, a.y + 3);
+          }
+        }
+        requestAnimationFrame(draw);
+      }
+      requestAnimationFrame(draw);
+    })();
+
+    /* --------------------------------------------------------------------------
+     * 2. Form State & File Management
+     * -------------------------------------------------------------------------- */
+    let photoItems = [];
+    let videoItems = [];
+
+    const setupBanner = document.getElementById('setupBanner');
+    if (!SCRIPT_URL) {
+      setupBanner.classList.add('visible');
+    }
+
+    const photoInput = document.getElementById('photoInput');
+    const photoCardsContainer = document.getElementById('photoCardsContainer');
+    const videoInput = document.getElementById('videoInput');
+    const videoListContainer = document.getElementById('videoListContainer');
+    const archiveForm = document.getElementById('archiveForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const progressBox = document.getElementById('progressBox');
+    const progressStatusText = document.getElementById('progressStatusText');
+    const progressPercentText = document.getElementById('progressPercentText');
+    const progressBarFill = document.getElementById('progressBarFill');
+    const progressDetailText = document.getElementById('progressDetailText');
+    const completionCard = document.getElementById('completionCard');
+    const resetBtn = document.getElementById('resetBtn');
+
+    function formatBytes(bytes) {
+      if (bytes < 1024) return bytes + ' B';
+      if (bytes < 1048576) return (bytes / 1024).toFixed(1) + ' KB';
+      return (bytes / 1048576).toFixed(1) + ' MB';
+    }
+
+    photoInput.addEventListener('change', (e) => {
+      const files = Array.from(e.target.files || []);
+      files.forEach((file) => {
+        const id = 'photo_' + Date.now() + '_' + Math.random().toString(36).slice(2, 7);
+        const previewUrl = URL.createObjectURL(file);
+        photoItems.push({
+          id,
+          file,
+          previewUrl,
+          year: '',
+          eventPlace: '',
+          people: '',
+          note: ''
+        });
+      });
+      photoInput.value = '';
+      renderPhotoCards();
+    });
+
+    function renderPhotoCards() {
+      photoCardsContainer.innerHTML = '';
+      photoItems.forEach((item, idx) => {
+        const card = document.createElement('div');
+        card.className = 'photo-index-card';
+        card.innerHTML = `
+          <button type="button" class="remove-file-btn" data-remove-photo="${item.id}">삭제 ✕</button>
+          <div class="photo-preview-col">
+            <span class="photo-badge">PHOTO #${String(idx + 1).padStart(2, '0')}</span>
+            <div class="photo-thumb-wrap">
+              <img src="${item.previewUrl}" alt="첨부 사진 ${idx + 1}" />
+            </div>
+            <div class="photo-file-meta">${escapeHtml(item.file.name)} (${formatBytes(item.file.size)})</div>
+          </div>
+          <div class="photo-meta-col">
+            <div class="photo-meta-row">
+              <div>
+                <label>촬영년도 (대략)</label>
+                <input type="text" placeholder="예: 2016년" value="${escapeHtml(item.year)}" data-id="${item.id}" data-field="year" />
+              </div>
+              <div>
+                <label>장소 / 촬영 당시 정보</label>
+                <input type="text" placeholder="예: 2016년 HCI 학회, 연구실 MT 등" value="${escapeHtml(item.eventPlace)}" data-id="${item.id}" data-field="eventPlace" />
+              </div>
+            </div>
+            <div>
+              <label>등장인물 명단 (기억나는 수준에서)</label>
+              <input type="text" placeholder="예: 한광희 교수님, 김연세, 이인지, 박공학" value="${escapeHtml(item.people)}" data-id="${item.id}" data-field="people" />
+            </div>
+            <div>
+              <label>사진에 얽힌 짧은 에피소드 (선택)</label>
+              <input type="text" placeholder="예: 학회 발표를 마치고 다 같이 찍은 기념사진입니다" value="${escapeHtml(item.note)}" data-id="${item.id}" data-field="note" />
+            </div>
+          </div>
+        `;
+        photoCardsContainer.appendChild(card);
+      });
+
+      photoCardsContainer.querySelectorAll('input[data-id]').forEach((inp) => {
+        inp.addEventListener('input', (e) => {
+          const targetId = e.target.getAttribute('data-id');
+          const field = e.target.getAttribute('data-field');
+          const found = photoItems.find((p) => p.id === targetId);
+          if (found) found[field] = e.target.value;
+        });
+      });
+
+      photoCardsContainer.querySelectorAll('button[data-remove-photo]').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const targetId = btn.getAttribute('data-remove-photo');
+          const idx = photoItems.findIndex((p) => p.id === targetId);
+          if (idx !== -1) {
+            URL.revokeObjectURL(photoItems[idx].previewUrl);
+            photoItems.splice(idx, 1);
+            renderPhotoCards();
+          }
+        });
+      });
+    }
+
+    videoInput.addEventListener('change', (e) => {
+      const files = Array.from(e.target.files || []);
+      files.forEach((file) => {
+        const id = 'video_' + Date.now() + '_' + Math.random().toString(36).slice(2, 7);
+        videoItems.push({ id, file });
+      });
+      videoInput.value = '';
+      renderVideoList();
+    });
+
+    function renderVideoList() {
+      videoListContainer.innerHTML = '';
+      videoItems.forEach((item, idx) => {
+        const row = document.createElement('div');
+        row.className = 'video-item-card';
+        row.innerHTML = `
+          <div class="video-item-info">
+            <span class="video-badge">VIDEO #${idx + 1}</span>
+            <span class="video-name">${escapeHtml(item.file.name)}</span>
+            <span class="video-size">(${formatBytes(item.file.size)})</span>
+          </div>
+          <button type="button" class="remove-file-btn" style="position:static;" data-remove-video="${item.id}">삭제 ✕</button>
+        `;
+        videoListContainer.appendChild(row);
+      });
+
+      videoListContainer.querySelectorAll('button[data-remove-video]').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const targetId = btn.getAttribute('data-remove-video');
+          videoItems = videoItems.filter((v) => v.id !== targetId);
+          renderVideoList();
+        });
+      });
+    }
+
+    function escapeHtml(str) {
+      return String(str || '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+    }
+
+    function fileToBase64(file) {
+      return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onload = () => {
+          const result = reader.result;
+          const base64 = result.split(',')[1];
+          resolve(base64);
+        };
+        reader.onerror = (err) => reject(err);
+        reader.readAsDataURL(file);
+      });
+    }
+
+    function setProgress(percent, status, detail) {
+      progressBox.classList.add('active');
+      progressBarFill.style.width = `${Math.min(100, Math.max(0, percent))}%`;
+      progressPercentText.textContent = `${Math.round(percent)}%`;
+      if (status) progressStatusText.textContent = status;
+      if (detail) progressDetailText.textContent = detail;
+    }
+
+    archiveForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const alumniName = document.getElementById('alumniName').value.trim();
+      const gradYear = document.getElementById('gradYear').value.trim();
+      const alumniUpdate = document.getElementById('alumniUpdate').value.trim();
+
+      if (!alumniName || !gradYear || !alumniUpdate) {
+        alert('성함, 졸업년도, 그리고 근황/메시지를 모두 입력해 주세요.');
+        return;
+      }
+
+      submitBtn.disabled = true;
+      const totalFiles = photoItems.length + videoItems.length;
+      setProgress(5, '자료 전송을 시작합니다...', `총 파일 ${totalFiles}개 준비 중`);
+
+      try {
+        if (!SCRIPT_URL) {
+          for (let i = 1; i <= 4; i++) {
+            await new Promise((r) => setTimeout(r, 350));
+            setProgress(i * 25, '미리보기 전송 시뮬레이션 중...', `구글 드라이브 및 시트 연동 테스트 (${i}/4)`);
+          }
+          archiveForm.style.display = 'none';
+          completionCard.classList.add('active');
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+          return;
+        }
+
+        const photoSummaryLines = photoItems.map((p, idx) => {
+          return `[사진${idx + 1}] 연도:${p.year || '미상'} | 장소/행사:${p.eventPlace || '-'} | 인물:${p.people || '-'} | 메모:${p.note || '-'}`;
+        });
+
+        setProgress(10, '동문 전용 폴더 및 시트 기록 생성 중...', `${alumniName} (${gradYear})님 아카이브 생성`);
+
+        const initResp = await fetch(SCRIPT_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+          body: JSON.stringify({
+            action: 'initSubmission',
+            alumniName,
+            gradYear,
+            alumniUpdate,
+            photoSummary: photoSummaryLines.join('\n'),
+            photoCount: photoItems.length,
+            videoCount: videoItems.length
+          })
+        });
+
+        const initData = await initResp.json();
+        if (!initData.ok) {
+          throw new Error(initData.error || '초기화 중 오류가 발생했습니다.');
+        }
+
+        const folderId = initData.folderId;
+        const rowNumber = initData.rowNumber;
+        let completedFiles = 0;
+
+        for (let i = 0; i < photoItems.length; i++) {
+          const item = photoItems[i];
+          const ext = (item.file.name.split('.').pop() || 'jpg').toLowerCase();
+          const cleanYear = (item.year || '연도미상').replace(/[\\/:*?"<>|]/g, '');
+          const cleanEvent = (item.eventPlace || '추억사진').replace(/[\\/:*?"<>|]/g, '').slice(0, 25);
+          const customFileName = `[${gradYear}_${alumniName}]_사진${i + 1}_${cleanYear}_${cleanEvent}.${ext}`;
+
+          setProgress(
+            15 + ((completedFiles / Math.max(1, totalFiles)) * 75),
+            `추억 사진 업로드 중 (${i + 1}/${photoItems.length})...`,
+            customFileName
+          );
+
+          await uploadSingleFile(item.file, customFileName, folderId, rowNumber, {
+            year: item.year,
+            eventPlace: item.eventPlace,
+            people: item.people,
+            note: item.note
+          });
+          completedFiles++;
+        }
+
+        for (let j = 0; j < videoItems.length; j++) {
+          const vItem = videoItems[j];
+          const ext = (vItem.file.name.split('.').pop() || 'mp4').toLowerCase();
+          const customFileName = `[${gradYear}_${alumniName}]_동영상축사${j + 1}.${ext}`;
+
+          setProgress(
+            15 + ((completedFiles / Math.max(1, totalFiles)) * 75),
+            `동영상 축사 업로드 중 (${j + 1}/${videoItems.length})...`,
+            `${customFileName} (${formatBytes(vItem.file.size)})`
+          );
+
+          await uploadSingleFile(vItem.file, customFileName, folderId, rowNumber, {
+            type: 'video'
+          }, (chunkRatio) => {
+            const basePct = 15 + ((completedFiles / Math.max(1, totalFiles)) * 75);
+            const stepWeight = 75 / Math.max(1, totalFiles);
+            setProgress(
+              basePct + chunkRatio * stepWeight,
+              `동영상 축사 업로드 중 (${j + 1}/${videoItems.length})...`,
+              `${customFileName} — ${Math.round(chunkRatio * 100)}% 완료`
+            );
+          });
+          completedFiles++;
+        }
+
+        setProgress(100, '모든 자료가 성공적으로 업로드되었습니다!', '전송 완료');
+        archiveForm.style.display = 'none';
+        completionCard.classList.add('active');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } catch (err) {
+        console.error(err);
+        alert('전송 중 오류가 발생했습니다: ' + err.message);
+        submitBtn.disabled = false;
+      }
+    });
+
+    async function uploadSingleFile(file, customFileName, folderId, rowNumber, meta, onChunkProgress) {
+      const SINGLE_LIMIT = 20 * 1024 * 1024;
+
+      if (file.size <= SINGLE_LIMIT) {
+        const base64Data = await fileToBase64(file);
+        const resp = await fetch(SCRIPT_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+          body: JSON.stringify({
+            action: 'uploadFile',
+            folderId,
+            rowNumber,
+            fileName: customFileName,
+            mimeType: file.type || 'application/octet-stream',
+            base64Data,
+            meta
+          })
+        });
+        const resJson = await resp.json();
+        if (!resJson.ok) throw new Error(resJson.error || '파일 업로드 실패');
+        return resJson;
+      }
+
+      const CHUNK_SIZE = 9 * 1024 * 1024;
+      const totalChunks = Math.ceil(file.size / CHUNK_SIZE);
+      let resumableUrl = null;
+
+      for (let chunkIndex = 0; chunkIndex < totalChunks; chunkIndex++) {
+        const start = chunkIndex * CHUNK_SIZE;
+        const end = Math.min(file.size, start + CHUNK_SIZE);
+        const blobSlice = file.slice(start, end);
+        const base64Chunk = await fileToBase64(blobSlice);
+
+        const resp = await fetch(SCRIPT_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+          body: JSON.stringify({
+            action: 'uploadChunk',
+            folderId,
+            rowNumber,
+            resumableUrl,
+            fileName: customFileName,
+            mimeType: file.type || 'video/mp4',
+            chunkIndex,
+            totalChunks,
+            byteStart: start,
+            byteEnd: end - 1,
+            totalFileSize: file.size,
+            base64Chunk
+          })
+        });
+        const resJson = await resp.json();
+        if (!resJson.ok) throw new Error(resJson.error || '대용량 동영상 분할 업로드 실패');
+        resumableUrl = resJson.resumableUrl;
+        if (onChunkProgress) onChunkProgress((chunkIndex + 1) / totalChunks);
+      }
+    }
+
+    resetBtn.addEventListener('click', () => {
+      photoItems.forEach((p) => URL.revokeObjectURL(p.previewUrl));
+      photoItems = [];
+      videoItems = [];
+      renderPhotoCards();
+      renderVideoList();
+      archiveForm.reset();
+      progressBox.classList.remove('active');
+      completionCard.classList.remove('active');
+      archiveForm.style.display = 'block';
+      submitBtn.disabled = false;
+    });
+  </script>
+</body>
+</html>
